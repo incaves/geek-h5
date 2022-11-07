@@ -1,39 +1,46 @@
-@import '../../assets/styles/hairline.scss';
 .root {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  height: 46px;
-  width: 100%;
-  // padding: 0 42px;
-  background-color: #fff;
-  // border-bottom: 1px solid #ccc;
-  // ^ 使用封装的函数
-  @include hairline('bottom', #ccc);
   :global {
-    .left {
-      padding: 0 12px 0 16px;
-      line-height: 46px;
-    }
-    .icon {
-      font-size: 16px;
+    .iconfanhui {
+      font-size: 20px;
     }
 
-    .title {
-      // ^ flex 占剩余的宽度
-      flex: 1;
-      margin: 0 auto;
-      color: #323233;
-      font-weight: 500;
-      font-size: 16px;
-      text-align: center;
-    }
+    .content {
+      padding: 0 32px;
 
-    .right {
-      padding-right: 16px;
-      // position: absolute;
-      // right: 16px;
+      h3 {
+        padding: 30px 0;
+        font-size: 24px;
+      }
+
+      .input-item {
+        position: relative;
+
+        &:first-child {
+          margin-bottom: 17px;
+        }
+      }
+
+      .validate {
+        position: absolute;
+
+        color: #ee0a24;
+        font-size: 12px;
+      }
+
+      .login-btn {
+        width: 100%;
+        height: 50px;
+        margin-top: 38px;
+        border-radius: 8px;
+        border: 0;
+        color: #fff;
+        background: linear-gradient(315deg, #fe4f4f, #fc6627);
+      }
+      .disabled {
+        background: linear-gradient(315deg, #ff9999, #ffa179);
+        // pointer move help
+        // cursor: not-allowed;
+      }
     }
   }
 }

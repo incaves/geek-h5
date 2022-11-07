@@ -1,0 +1,40 @@
+@import '../../assets/styles/hairline.scss';
+.root {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 100%;
+  // padding: 0 42px;
+  background-color: #fff;
+  // border-bottom: 1px solid #ccc;
+  // ^ 使用封装的函数
+  @include hairline('bottom', #ccc);
+  :global {
+    .left {
+      padding: 0 12px 0 16px;
+      line-height: 46px;
+    }
+    .icon {
+      font-size: 16px;
+    }
+
+    .title {
+      // ^ flex 占剩余的宽度
+      flex: 1;
+      margin: 0 auto;
+      color: #323233;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .right {
+      padding-right: 16px;
+      width: 48px;
+      // position: absolute;
+      // right: 16px;
+    }
+  }
+}
