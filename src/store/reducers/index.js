@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-function test(state = 0, action) {
-  return state
-}
+import login from './login'
+import profile from './profile'
 // 合并多个reducer
 const reducer = combineReducers({
-  test,
+  login,
+  profile,
 })
 
 export default reducer

@@ -1,0 +1,63 @@
+.root {
+  height: 100%;
+}
+
+.root :global .tabbar {
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 7px 0 5px;
+  background-color: #f7f8fa;
+  border-top: 1px solid #f0f0f0;
+}
+
+@media (min-resolution: 2dppx) {
+  .root :global .tabbar {
+    border-top: none;
+  }
+  .root :global .tabbar::before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 1px;
+    transform-origin: 50% 50%;
+    transform: scaleY(0.5);
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-resolution: 3dppx) {
+  .root :global .tabbar::before {
+    transform: scaleY(0.33);
+  }
+}
+
+.root :global .tabbar-item-active {
+  color: #fc6627;
+}
+
+.root :global .tabbar-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.root :global .tabbar-item .icon {
+  margin-bottom: 4px;
+  font-size: 28px;
+}
+
+.root :global .tabbar-item span {
+  font-size: 12px;
+}

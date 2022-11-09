@@ -19,10 +19,27 @@ assest -- 项目静态文件
         hairline.scss -- 解决移动端1px像素边框
 components - 全局共用组件
         Icom  -- icon图标(svg)
-        NavBar -- 顶部标题栏
+        Input -- input组件进行封装
+        NavBar -- 顶部标题栏进行封装
 pages - 路由组件
+      Home -- 首页
+      Layout -- 布局容器
+      Video -- 视频页面
+      QA -- 问答页面
+      Profile -- 个人中心
+          Edit 个人信息修改(没有地步的导航栏,属于一级路由)
 store - rudux
+    action
+        login.jsx -- 登陆页面的action(发送验证码和登陆)
+        profile.js  -- 登陆页面的action(获取个人资料信息)
+    reducers
+        login -- 登陆页面的reducers
+        profile.js -- 个人中心页面的reducers
+        index.jsx -- 全局reducers
+    index.js -- store核心
 utils - 工具
+    request.js -- axios请求
+    storage.js -- 本地存储
 App.jsx - 根文件
 index.js - 入口文件
 ```
