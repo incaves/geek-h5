@@ -21,13 +21,17 @@ components - 全局共用组件
         Icom  -- icon图标(svg)
         Input -- input组件进行封装
         NavBar -- 顶部标题栏进行封装
+        Textarea -- 文本域(显示最多输入多少字)
 pages - 路由组件
       Home -- 首页
       Layout -- 布局容器
       Video -- 视频页面
       QA -- 问答页面
       Profile -- 个人中心
-          Edit 个人信息修改(没有地步的导航栏,属于一级路由)
+          Edit 个人信息(没有底部的导航栏,属于一级路由)
+          components -- 个人信息的个人组件
+              EditInput -- 昵称和简介的内容编辑组件
+              EditList -- 性别和头像的弹出内容
 store - rudux
     action
         login.jsx -- 登陆页面的action(发送验证码和登陆)

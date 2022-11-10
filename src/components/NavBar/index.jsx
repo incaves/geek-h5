@@ -12,11 +12,17 @@ import { useHistory } from 'react-router'
  * @默认使用props传递
  * @title 标题区域
  * @extar 右侧内容
+ * @onLeftClick点击图标跳转到那里 可选的
  */
-export default function NavBar({ children, extar }) {
+export default function NavBar({ children, extar, onLeftClick }) {
   const history = useHistory()
   const back = () => {
-    history.go(-1) // 返回上一页
+    if (onLeftClick) {
+      // 传递了onLeftClick
+      onLeftClick() // 执行传递的回调(在当前使用组件内编写)
+    } else {
+      history.go(-1) // 返回上一页
+    }
   }
   return (
     // 使用scss变量

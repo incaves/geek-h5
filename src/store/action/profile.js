@@ -35,3 +35,17 @@ export const getUserProfile = () => {
 export const saveProfile = payload => {
   return { type: 'profile/profile', payload }
 }
+/**
+ * 修改用户信息
+ * @param {*} data = type修改谁 value修改的值
+ */
+export const updateProfile = data => {
+  return async dispatch => {
+    await request({
+      method: 'patch',
+      url: '/user/profile',
+      data, // 传递的数据
+    })
+    dispatch(getUserProfile())
+  }
+}

@@ -6,6 +6,7 @@ import classNames from 'classnames'
  * @extra 额外可能会显示的信息
  * @onExtraClick 点击事件(父组件传递的点击事件)
  * @className 可能会传递样式(使用classNames进行合并)(写一个input表示它时固定的)
+ * @rest 额外的属性
  */
 export default function Input({ extra, onExtraClick, className, ...rest }) {
   return (

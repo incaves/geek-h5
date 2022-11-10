@@ -1,0 +1,28 @@
+.root {
+  height: 100%;
+  padding: 8px 0;
+  background-color: #fff;
+}
+
+.root :global .list-item {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.root :global .list-item:active {
+  background-color: #f2f3f5;
+}
+
+.root :global .list-item:last-child {
+  color: #a5a6ab;
+}
+
+.root :global .list-item:last-child::before {
+  content: ' ';
+  display: block;
+  height: 8px;
+  background-color: #f7f8fa;
+}
