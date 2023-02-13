@@ -16,7 +16,7 @@ function Icon({ type, className, ...rest }) {
     </svg>
   )
 }
-// 传递的规则(此时type表示是必须的)
+// 使用组件时传递的规则(此时type表示是必须的)
 Icon.propTypes = {
   type: PropTypes.string.isRequired
 }

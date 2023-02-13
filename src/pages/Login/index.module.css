@@ -1,31 +1,91 @@
-.root {
+.root :global .iconfanhui {
+  font-size: 20px;
+}
+
+.root :global .content {
+  padding: 0 32px;
+}
+
+.root :global .content h3 {
+  padding: 30px 0;
+  font-size: 24px;
+}
+
+.root :global .content .input-item {
   position: relative;
-  display: flex;
-  align-items: center;
-  height: 46px;
-  width: 100%;
-  background-color: #fff;
+}
+
+.root :global .content .input-item:first-child {
+  margin-bottom: 17px;
+}
+
+.root :global .content .input-item .input-box {
+  position: relative;
   border-bottom: 1px solid #ccc;
 }
 
-.root :global .left {
-  padding: 0 12px 0 16px;
-  line-height: 46px;
+@media (min-resolution: 2dppx) {
+  .root :global .content .input-item .input-box {
+    border-bottom: none;
+  }
+  .root :global .content .input-item .input-box::after {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    width: 100%;
+    height: 1px;
+    transform-origin: 50% 100%;
+    transform: scaleY(0.5);
+  }
 }
 
-.root :global .icon {
+@media (min-resolution: 2dppx) and (min-resolution: 3dppx) {
+  .root :global .content .input-item .input-box::after {
+    transform: scaleY(0.33);
+  }
+}
+
+.root :global .content .input-item .input-box .input {
+  width: 100%;
+  height: 58px;
+  padding: 0;
   font-size: 16px;
 }
 
-.root :global .title {
-  flex: 1;
-  margin: 0 auto;
-  color: #323233;
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
+.root :global .content .input-item .input-box .input::placeholder {
+  color: #a5a6ab;
 }
 
-.root :global .right {
-  padding-right: 16px;
+.root :global .content .input-item .input-box .extra {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -8px;
+  color: #999;
+}
+
+.root :global .content .validate {
+  position: absolute;
+  color: #ee0a24;
+  font-size: 12px;
+}
+
+.root :global .content .login-btn {
+  width: 100%;
+  height: 50px;
+  margin-top: 38px;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  background: linear-gradient(315deg, #fe4f4f, #fc6627);
+}
+
+.root :global .content .disabled {
+  background: linear-gradient(315deg, #ff9999, #ffa179);
 }

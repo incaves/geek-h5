@@ -16,6 +16,7 @@
     --- none.png(图片)
   --components(全局公用组件)
     ---Icon(图标组件)
+    ---NavBar(顶部导航组件)
   --pages(路由页面)
     ---Home(首页)
     ---Login(登录)
