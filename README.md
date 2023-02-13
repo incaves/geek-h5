@@ -39,12 +39,12 @@
  --yarn.lock(yarn自动生成的文件)
 ```
 ### 项目笔记
->>App.jsx中没有使用<Link to='/login></Link>点击的方式进行跳转  
->>相当于使用了Vue中的编程式导航
+>App.jsx中没有使用<Link to='/login></Link>点击的方式进行跳转  
+>相当于使用了Vue中的编程式导航
 ### 项目的一些依赖
 ```javascript
 ----classNames
-一般多用于封装的组件,在使用组件时需要保留自己的样式  
+一般多用于封装的组件,在使用组件时需要传递样式  
 还在使用组件时,可以添加其他的样式
 classNames第一个参数是原有的样式  
 classNames第二个参数是使用组件时传递的样式
