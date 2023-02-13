@@ -1,0 +1,1 @@
+.root{position:relative;display:flex;align-items:center;height:46px;width:100%;background-color:#fff;border-bottom:1px solid #ccc}.root :global .left{padding:0 12px 0 16px;line-height:46px}.root :global .icon{font-size:16px}.root :global .title{flex:1;margin:0 auto;color:#323233;font-weight:500;font-size:16px;text-align:center}.root :global .right{padding-right:16px}
